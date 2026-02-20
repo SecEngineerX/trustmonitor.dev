@@ -1,469 +1,328 @@
 # TrustMonitor Design System
 
-**Philosophy:** Boring = Trustworthy. Every visual decision communicates institutional credibility.
+**Status:** LOCKED — No modifications without documented rationale
 
-**Reference:** Stripe's legal pages / McKinsey PDFs / Law firm websites.
+**Last Updated:** February 16, 2026
 
 ---
 
-## 🎨 COLOR PALETTE
+## Core Principles
 
-### Primary Colors (LOCKED)
+1. **Institutional Feel**: Enterprise legal document aesthetic
+2. **Maximum Whitespace**: Let numbers breathe, don't crowd
+3. **Zero Warmth**: Cold, factual, precise — not friendly
+4. **Data-Driven**: Show specific numbers, not abstract claims
+
+---
+
+## Color Palette
+
+### LOCKED COLORS
 
 ```css
-:root {
-  /* Backgrounds */
-  --bg-primary: #FFFFFF;           /* Pure white - main background */
-  --bg-secondary: #F9FAFB;         /* Light gray - alternating sections */
-  
-  /* Text */
-  --text-primary: #111827;         /* Near black - headlines, body */
-  --text-secondary: #4B5563;       /* Medium gray - subtext */
-  --text-muted: #6B7280;           /* Low contrast - legal/disclaimer */
-  
-  /* Borders */
-  --border: #E5E7EB;               /* Subtle borders only */
-  
-  /* Accent */
-  --accent: #7F1D1D;               /* Deep blood red - liability/urgency */
-  --accent-hover: #991B1B;         /* Slightly lighter on hover */
-  
-  /* Links */
-  --link-blue: #1E40AF;            /* Enterprise blue for legal links */
-  --link-blue-hover: #1E3A8A;      /* Darker on hover */
-}
+--bg-primary: #FFFFFF;        /* Pure white — no off-whites */
+--text-primary: #111827;      /* Near black — not pure black */
+--text-secondary: #6B7280;    /* Gray for supporting text */
+--accent: #7F1D1D;            /* Blood red for liability */
+--link-blue: #1E40AF;         /* Enterprise blue for links */
+--border-gray: #E5E7EB;       /* Subtle borders */
+--bg-subtle: #F9FAFB;         /* Barely-there backgrounds */
 ```
+
+### FORBIDDEN COLORS
+
+❌ **NO GREEN** (fintech/crypto association)
+❌ **NO GRADIENTS** (consumer tech vibe)
+❌ **NO SHADOWS/GLOWS** (softens institutional feel)
+❌ **NO DARK MODE** (complicates message, dilutes precision)
 
 ### Usage Rules
 
-| Element | Color Variable | Use Case |
-|---------|----------------|----------|
-| Body background | `--bg-primary` | Default page background |
-| Alternating sections | `--bg-secondary` | Every other section (Pain, Proof, Decision) |
-| Headlines | `--text-primary` | All H1, H2, H3 |
-| Body text | `--text-primary` | All paragraph text |
-| Subheadings | `--text-secondary` | Section leads, captions |
-| Legal text | `--text-muted` | Disclaimers, fine print |
-| Borders | `--border` | Card borders, dividers, inputs |
-| CTA buttons | `--accent` | Primary buttons, badge borders |
-| CTA hover | `--accent-hover` | Button hover states |
-| Text links | `--link-blue` | All href links in body copy |
-
-### FORBIDDEN Colors
-
-❌ **Any shade of green** (fintech/crypto vibe - instant rejection)
-❌ **Gradients** (startup vaporware signal)
-❌ **Shadows** (too playful)
-❌ **Glows** (casino/gaming aesthetic)
-❌ **Neon colors** (unprofessional)
-❌ **Pastels** (too soft for liability messaging)
-
-### Dark Mode
-
-**Status:** FORBIDDEN
-
-**Reason:** Enterprise buyers expect clean white backgrounds. Dark mode signals consumer product, not B2B tool.
+- **Red (`--accent`)**: Use ONLY for liability amounts, $0 payouts, missed incidents
+- **Blue (`--link-blue`)**: Links, TrustMonitor payouts, positive outcomes
+- **Gray (`--text-secondary`)**: Disclaimers, supporting copy, technical specs
 
 ---
 
-## 📝 TYPOGRAPHY
+## Typography
 
-### Font Families (LOCKED)
-
-```css
-:root {
-  /* Headings */
-  --font-headings: 'Helvetica Neue', 'Arial Black', 'Arial', sans-serif;
-  
-  /* Body */
-  --font-body: 'Helvetica Neue', 'Arial', sans-serif;
-  
-  /* Code/Monospace */
-  --font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Courier New', monospace;
-}
-```
-
-**Why Helvetica Neue:**
-- Maximum readability
-- Institutional feel (banks, law firms use it)
-- No personality = trustworthy
-- System font = fast load
-
-**FORBIDDEN Fonts:**
-- ❌ Serif fonts (Times New Roman, Georgia, Merriweather)
-- ❌ Script fonts (Pacifico, Dancing Script)
-- ❌ Display fonts (Impact, Bebas Neue)
-- ❌ Any Google Font that isn't system-standard
-
-### Font Sizes
+### Font Stack
 
 ```css
-:root {
-  /* Scale */
-  --text-9xl: 120px;   /* Not used on landing */
-  --text-8xl: 96px;    /* Hero headlines */
-  --text-7xl: 72px;    /* Not used */
-  --text-6xl: 64px;    /* Not used */
-  --text-5xl: 48px;    /* Section headlines */
-  --text-4xl: 36px;    /* Calculator results */
-  --text-3xl: 32px;    /* Card headlines */
-  --text-2xl: 24px;    /* Subheadings */
-  --text-xl: 20px;     /* Large body text */
-  --text-lg: 18px;     /* Body text */
-  --text-base: 16px;   /* Default body */
-  --text-sm: 14px;     /* Captions, disclaimers */
-}
+--font-headings: 'Helvetica Neue', Arial, sans-serif;
+--font-body: 'Helvetica Neue', Arial, sans-serif;
+--font-mono: 'SF Mono', Monaco, 'Courier New', monospace;
 ```
 
-**CRITICAL RULE:** No font size below 16px for body text. 14px only for legal disclaimers.
-
-### Font Weights
-
-```css
-:root {
-  --weight-normal: 400;    /* Body text */
-  --weight-medium: 500;    /* Emphasized text */
-  --weight-bold: 700;      /* Subheadings */
-  --weight-black: 900;     /* Hero headlines */
-}
-```
-
-**Usage:**
-- Hero headlines: `--weight-black`
-- Section headlines: `--weight-bold`
-- Body text: `--weight-normal`
-- Links: `--weight-medium`
-
-### Line Heights
-
-```css
-:root {
-  --leading-tight: 1.1;      /* Headlines */
-  --leading-normal: 1.5;     /* Body text */
-  --leading-relaxed: 1.6;    /* Long-form content */
-}
-```
-
-### Letter Spacing
-
-```css
-:root {
-  --tracking-tight: -0.02em;   /* Large headlines */
-  --tracking-normal: 0;        /* Body text */
-  --tracking-wide: 0.05em;     /* All-caps labels */
-}
-```
-
-### FORBIDDEN Typography
-
-❌ **Italic text** (anywhere - makes copy feel informal)
-❌ **All-caps headlines** (shouting, unprofessional)
-❌ **Underlined text** (except links)
-❌ **Centered text** (except in specific card components)
-❌ **Justified text** (poor readability)
-
----
-
-## 📏 SPACING SYSTEM
+**Why Helvetica Neue?**
+- Institutional standard (legal, financial docs)
+- High readability at all sizes
+- No personality — purely functional
 
 ### Scale
 
 ```css
-:root {
-  --space-1: 4px;      /* Tight spacing */
-  --space-2: 8px;      /* Small gaps */
-  --space-3: 16px;     /* Default spacing */
-  --space-4: 24px;     /* Component padding */
-  --space-5: 32px;     /* Large gaps */
-  --space-6: 48px;     /* Section element gaps */
-  --space-7: 64px;     /* Section padding (small) */
-  --space-8: 96px;     /* Section padding (default) */
-  --space-9: 128px;    /* Section padding (large) */
-}
+--text-6xl: 60px;   /* Hero headlines */
+--text-5xl: 48px;   /* Section headlines */
+--text-4xl: 36px;   /* Subsections */
+--text-3xl: 30px;   /* Card headers */
+--text-2xl: 24px;   /* Component titles */
+--text-xl: 20px;    /* Large body */
+--text-lg: 18px;    /* Lead paragraphs */
+--text-base: 16px;  /* Body text (MINIMUM) */
+--text-sm: 14px;    /* Small print */
+--text-xs: 12px;    /* Tiny labels */
 ```
+
+### FORBIDDEN
+
+❌ **NO SERIF FONTS** (too traditional/academic)
+❌ **NO ITALIC TEXT** (softens message)
+❌ **NO TEXT <16PX** (accessibility violation)
+❌ **NO ALL-CAPS BODY TEXT** (except CTAs/labels)
+
+### Line Height
+
+```css
+--line-tight: 1.2;      /* Headlines */
+--line-normal: 1.5;     /* Body text */
+--line-relaxed: 1.75;   /* Lead paragraphs */
+```
+
+---
+
+## Spacing
+
+### Scale (8px base unit)
+
+```css
+--space-1: 4px;
+--space-2: 8px;
+--space-3: 16px;
+--space-4: 24px;
+--space-5: 32px;
+--space-6: 48px;
+--space-7: 64px;
+--space-8: 96px;
+--space-9: 128px;
+```
+
+### Usage
+
+- **Section padding**: `--space-8` (96px) desktop, `--space-6` (48px) mobile
+- **Card gaps**: `--space-6` (48px)
+- **Component padding**: `--space-4` (24px)
+- **Text margins**: `--space-3` (16px)
+
+### Rule: More is More
+
+When in doubt, add MORE whitespace. This isn't consumer SaaS — the emptiness conveys institutional gravity.
+
+---
+
+## Layout
 
 ### Container Widths
 
 ```css
-:root {
-  --container: 1280px;         /* Default max-width */
-  --container-narrow: 800px;   /* Proof, Waitlist sections */
-}
+--container-max: 1200px;      /* Default content */
+--container-narrow: 800px;    /* Hero, form */
+--container-wide: 1400px;     /* Full-width sections */
 ```
 
-### Section Padding
-
-**Rule:** Every section must have minimum 96px top/bottom padding.
+### Grid Gaps
 
 ```css
-.section {
-  padding: var(--space-8) 0;  /* 96px top/bottom */
-}
-
-@media (max-width: 768px) {
-  .section {
-    padding: var(--space-7) 0;  /* 64px on mobile */
-  }
-}
+gap: var(--space-6);  /* Default */
+gap: var(--space-4);  /* Tight layouts */
 ```
-
-### Whitespace Philosophy
-
-**Rule:** Whitespace is your only visual element. Use it generously.
-
-- **Between sections:** 96px minimum
-- **Between elements in section:** 48px
-- **Between related items:** 24px
-- **Component internal padding:** 24-32px
-
-**FORBIDDEN:**
-❌ Tight spacing (<16px between unrelated elements)
-❌ Inconsistent spacing (pick one value from scale)
-❌ Decorative spacing (no "visual rhythm" experiments)
 
 ---
 
-## 🔘 COMPONENTS
+## Components
 
-### Button - Primary
+### Buttons
 
-**Usage:** Main CTA ("Apply to Founding Program", "Calculate Your Loss")
-
+**Primary (Dark)**
 ```css
-.btn-primary {
-  background: transparent;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  font-family: var(--font-headings);
-  font-weight: var(--weight-bold);
-  font-size: var(--text-xl);
-  padding: var(--space-4) var(--space-6);  /* 24px 48px */
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  line-height: 1;
-  border-radius: 0;  /* No rounded corners */
-}
+background: var(--text-primary);
+color: var(--bg-primary);
+border: 2px solid var(--text-primary);
+```
 
-.btn-primary:hover {
-  background: var(--accent);
-  color: var(--bg-primary);
-  border-color: var(--accent);
-}
+**Secondary (Outline)**
+```css
+background: var(--bg-primary);
+color: var(--text-primary);
+border: 2px solid var(--text-primary);
+```
+
+**Hover State**
+```css
+transform: translateY(-2px);
+background: var(--accent);
 ```
 
 **FORBIDDEN:**
-❌ Rounded corners (border-radius > 0)
-❌ Box shadows
+❌ Rounded corners >4px
 ❌ Gradient backgrounds
-❌ Icon prefixes
+❌ Icon-only buttons without text
 
-### Button - Secondary
-
-**Usage:** Secondary actions ("Review SLA Preview", "Learn More")
+### Cards
 
 ```css
-.btn-secondary {
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--text-primary);
-  font-family: var(--font-body);
-  font-weight: var(--weight-medium);
-  font-size: var(--text-lg);
-  padding: var(--space-3) var(--space-5);  /* 16px 32px */
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border-radius: 0;
-}
-
-.btn-secondary:hover {
-  border-color: var(--text-primary);
-  background: transparent;
-}
+background: var(--bg-primary);
+border: 1px solid var(--border-gray);
+border-radius: var(--border-radius-sm); /* 4px max */
+padding: var(--space-6);
 ```
 
-### Link
-
-**Usage:** In-text links to SLA, legal docs
-
+**Highlight variant:**
 ```css
-.link {
-  color: var(--link-blue);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  font-weight: var(--weight-medium);
-  transition: all 0.2s ease;
-}
-
-.link:hover {
-  color: var(--link-blue-hover);
-  text-decoration: none;
-}
+border: 2px solid var(--link-blue);
+box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
 ```
 
-### Badge
+### Forms
 
-**Usage:** "Launching Q2 2026", "Most Selected"
-
+**Inputs**
 ```css
-.badge {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: var(--weight-bold);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wide);
-  padding: var(--space-1) var(--space-2);  /* 4px 8px */
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  background: transparent;
-  border-radius: 0;
-}
+padding: var(--space-3);
+border: 1px solid var(--border-gray);
+border-radius: var(--border-radius-sm);
+font-size: var(--text-base);
 ```
 
-### Container
-
-**Usage:** Max-width wrapper for all sections
-
+**Labels**
 ```css
-.container {
-  max-width: var(--container);  /* 1280px */
-  margin: 0 auto;
-  padding: 0 var(--space-4);  /* 0 24px */
-}
+font-weight: var(--weight-medium);
+margin-bottom: var(--space-2);
+```
 
-.container-narrow {
-  max-width: var(--container-narrow);  /* 800px */
-  margin: 0 auto;
-  padding: 0 var(--space-4);
-}
+**Required Indicator**
+```css
+color: var(--accent);
 ```
 
 ---
 
-## 📱 RESPONSIVE DESIGN
+## Borders & Shadows
 
-### Breakpoints
-
-```css
-/* Mobile */
-@media (max-width: 768px) {
-  /* Stack all grids vertically */
-  /* Reduce headline sizes */
-  /* Full-width buttons */
-}
-
-/* Tablet */
-@media (min-width: 769px) and (max-width: 1024px) {
-  /* Optional: intermediate styles */
-}
-
-/* Desktop */
-@media (min-width: 1025px) {
-  /* Default styles apply */
-}
-```
-
-### Mobile Typography
+### Borders
 
 ```css
-@media (max-width: 768px) {
-  :root {
-    --text-8xl: 48px;   /* Hero: 96px → 48px */
-    --text-5xl: 32px;   /* Sections: 48px → 32px */
-    --text-3xl: 24px;   /* Cards: 32px → 24px */
-  }
-}
+--border-width: 1px;
+--border-radius: 2px;       /* Minimal */
+--border-radius-sm: 4px;    /* Maximum allowed */
 ```
 
-### Mobile Spacing
+### Shadows
 
+**ONLY use for highlighted cards:**
 ```css
-@media (max-width: 768px) {
-  .section {
-    padding: var(--space-7) 0;  /* 96px → 64px */
-  }
-  
-  .container {
-    padding: 0 var(--space-3);  /* 24px → 16px */
-  }
-}
+box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
 ```
 
-### Mobile Layout Rules
-
-1. **All grids stack vertically** (no side-by-side cards)
-2. **Buttons become full-width**
-3. **Remove `<br>` tags in headlines** (let text wrap naturally)
-4. **Tables become stacked cards** (horizontal scroll forbidden)
+**FORBIDDEN:**
+❌ Drop shadows on text
+❌ Inner shadows
+❌ Multiple shadow layers
+❌ Colored shadows (except blue highlight)
 
 ---
 
-## 🚫 ABSOLUTE PROHIBITIONS
+## Animations
 
-### Visual Elements
+### Transitions
 
-❌ **Icons** (Font Awesome, Heroicons, etc.)
-❌ **Illustrations** (abstract shapes, scenes)
-❌ **Photos** (stock photos, team photos)
-❌ **Decorative elements** (dividers, ornaments)
-❌ **Animations** (beyond hover transitions)
+```css
+--transition-fast: 150ms ease-in-out;
+--transition-base: 250ms ease-in-out;
+```
 
-### Effects
+**Allowed Animations:**
+✅ Button hover (translateY, background)
+✅ Link underline on hover
+✅ Input border color on focus
 
-❌ **Box shadows** (none, ever)
-❌ **Text shadows** (none, ever)
-❌ **Gradients** (solid colors only)
-❌ **Opacity** (except for disabled states)
-❌ **Filters** (blur, grayscale, etc.)
-
-### Typography
-
-❌ **Italic text** (except for blockquote attribution)
-❌ **All-caps headlines** (only for small labels)
-❌ **Exclamation marks** in headlines
-❌ **Question marks** in headlines
-❌ **Emojis** (except ⚠️ in legal disclaimer)
+**FORBIDDEN:**
+❌ Page load animations
+❌ Scroll-triggered animations
+❌ Loading spinners (show content immediately)
+❌ Slide-ins, fade-ins, etc.
 
 ---
 
-## ✅ IMPLEMENTATION CHECKLIST
+## Responsive Breakpoints
+
+```css
+/* Desktop-first approach */
+@media (max-width: 768px) {
+  /* Mobile adjustments */
+}
+```
+
+**Mobile Changes:**
+- Reduce heading sizes by 1 step
+- Reduce section padding to `--space-6`
+- Stack grids to single column
+- Full-width buttons
+
+---
+
+## Icons & Images
+
+### FORBIDDEN
+
+❌ **NO ICONS** (not even chevrons on buttons)
+❌ **NO ILLUSTRATIONS**
+❌ **NO STOCK PHOTOS**
+❌ **NO BRAND LOGOS** (except competitor comparison)
+
+### Exceptions
+
+✅ Checkmarks for feature lists (Unicode ✓)
+✅ Warning symbols for status quo (Unicode ⚠)
+✅ Lock emoji for security (🔒)
+
+---
+
+## Code Blocks
+
+```css
+font-family: var(--font-mono);
+font-size: var(--text-sm);
+background: var(--text-primary); /* Dark background */
+color: rgba(255, 255, 255, 0.9); /* Light text */
+padding: var(--space-6);
+border-radius: var(--border-radius-sm);
+```
+
+---
+
+## Validation Checklist
 
 Before deploying:
 
-- [ ] All colors match exact hex values
-- [ ] No font sizes below 16px (body text)
-- [ ] No rounded corners >4px anywhere
-- [ ] No box shadows anywhere
-- [ ] No gradients anywhere
-- [ ] No icons/illustrations
-- [ ] All sections have 96px padding
-- [ ] Mobile responsive (tested on iPhone 12+)
-- [ ] All buttons use exact CSS specs
 - [ ] No green colors anywhere
-- [ ] No dark mode toggle
+- [ ] No rounded corners >4px
+- [ ] No illustrations/icons/photos
+- [ ] All text ≥16px
+- [ ] No italic text
+- [ ] No dark mode support
+- [ ] Whitespace feels institutional
+- [ ] Numbers use monospace font
+- [ ] Liability amounts in red
+- [ ] TrustMonitor payouts in blue
 
 ---
 
-## 📚 REFERENCES
+## References
 
-### Visual Inspiration (What to Match)
-
-✅ **Stripe Legal Pages** - https://stripe.com/legal
-✅ **McKinsey PDFs** - https://www.mckinsey.com/featured-insights
-✅ **Law Firm Websites** - https://www.skadden.com
-✅ **Government Forms** - https://www.irs.gov/forms-pubs
-
-### Anti-Patterns (What to Avoid)
-
-❌ Dribbble landing pages
-❌ Product Hunt featured pages
-❌ Startup pitch decks
-❌ SaaS template libraries
+- W3C Contrast Checker: https://webaim.org/resources/contrastchecker/
+- Typescale: https://typescale.com
+- 8pt Grid System: https://spec.fm/specifics/8-pt-grid
 
 ---
 
-**Last Updated:** February 13, 2026  
-**Status:** Locked - No exceptions
+**Remember:** This isn't a friendly SaaS product. It's a legal contract disguised as a landing page. Design accordingly.

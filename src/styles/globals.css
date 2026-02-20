@@ -1,0 +1,290 @@
+/* Import dependencies */
+@import './variables.css';
+@import './typography.css';
+@import './responsive-fixes.css';
+
+/* MODERN CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  background: var(--bg-primary);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* Remove all animations for people who prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GLOBAL LAYOUT HELPERS */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.container-narrow {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.section {
+  padding: var(--space-8) 0;
+}
+
+.section-lg {
+  padding: var(--space-9) 0;
+}
+
+/* FORM STYLES - Institutional Design */
+.tm-intake-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tm-gate-intro {
+  text-align: center;
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.tm-gate-intro h1 {
+  margin-bottom: var(--space-3);
+}
+
+.tm-subhead {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: var(--line-relaxed);
+  margin-bottom: var(--space-4);
+}
+
+.tm-scarcity {
+  font-size: var(--text-base);
+  color: var(--text-primary);
+}
+
+.accent-text {
+  color: var(--accent);
+  font-weight: var(--weight-semibold);
+}
+
+/* FORM SECTIONS */
+.tm-section {
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.tm-section:last-of-type {
+  border-bottom: none;
+}
+
+.tm-section h2 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-6);
+  font-weight: var(--weight-semibold);
+}
+
+/* FORM FIELDS */
+.tm-field {
+  margin-bottom: var(--space-5);
+}
+
+.tm-field:last-child {
+  margin-bottom: 0;
+}
+
+.tm-field label {
+  display: block;
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--space-2);
+  color: var(--text-primary);
+}
+
+.required {
+  color: var(--accent);
+}
+
+.tm-field input[type="text"],
+.tm-field input[type="email"],
+.tm-field select {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--border-gray);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-base);
+  transition: border-color var(--transition-fast);
+  background: var(--bg-primary);
+}
+
+.tm-field input:focus,
+.tm-field select:focus {
+  outline: none;
+  border-color: var(--link-blue);
+}
+
+.tm-field input::placeholder {
+  color: var(--text-secondary);
+}
+
+.tm-field small {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: var(--line-normal);
+}
+
+/* LIABILITY ACKNOWLEDGMENT BOX */
+.tm-liability-box {
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-gray);
+  border-radius: var(--border-radius-sm);
+  padding: var(--space-4);
+  margin: var(--space-6) 0;
+}
+
+.tm-liability-box label {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.tm-liability-box input[type="checkbox"] {
+  margin-right: var(--space-3);
+  margin-top: var(--space-1);
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.tm-liability-box span {
+  font-size: var(--text-base);
+  line-height: var(--line-relaxed);
+  color: var(--text-primary);
+}
+
+/* PRIVACY NOTE */
+.tm-privacy-note {
+  text-align: center;
+  margin: var(--space-6) 0;
+  padding: var(--space-4);
+  background: var(--bg-subtle);
+  border-radius: var(--border-radius-sm);
+}
+
+.tm-privacy-note p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* SUBMIT SECTION */
+.tm-submit {
+  text-align: center;
+  margin-top: var(--space-6);
+}
+
+.tm-capacity-note {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+  line-height: var(--line-relaxed);
+}
+
+.tm-button {
+  display: inline-block;
+  padding: var(--space-4) var(--space-6);
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-base);
+  border: 2px solid var(--text-primary);
+  letter-spacing: 0.025em;
+}
+
+.tm-button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.tm-review-note {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-3);
+  }
+  
+  .section {
+    padding: var(--space-6) 0;
+  }
+  
+  .tm-gate-intro {
+    margin-bottom: var(--space-6);
+  }
+  
+  .tm-section {
+    margin-bottom: var(--space-6);
+  }
+}
+
+
+
+/* Force inclusion in prod bundle */
+body::after {
+    content: "globals-loaded";
+    display: none;
+}

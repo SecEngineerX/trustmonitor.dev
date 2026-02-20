@@ -1,196 +1,372 @@
 # TrustMonitor Launch Checklist
 
-**Purpose:** Ensure the landing page meets all quality, compliance, and credibility standards before going live.
-
-**Rule:** Do NOT deploy until every checkbox is marked complete.
+**Target Launch:** Q2 2026 (March 31 founding deadline)
 
 ---
 
-## ✅ DESIGN VALIDATION
+## PRE-DEPLOYMENT VALIDATION
 
-### Colors
-- [ ] All colors match exact hex values from DESIGN_SYSTEM.md
-- [ ] No green colors anywhere on the page
-- [ ] No gradients, shadows, or glows
-- [ ] Only white (#FFFFFF) and light gray (#F9FAFB) backgrounds
-- [ ] Accent red (#7F1D1D) used only for CTAs and urgency elements
+### 1. Code Quality
 
-### Typography
-- [ ] Helvetica Neue (or Arial fallback) used throughout
-- [ ] No serif fonts anywhere
-- [ ] No italic text anywhere
-- [ ] No font sizes below 16px for body text
-- [ ] Hero headline is 96px (48px mobile)
+- [ ] TypeScript compiles with no errors (`npm run type-check`)
+- [ ] Next.js builds successfully (`npm run build`)
+- [ ] No console errors in browser
+- [ ] All imports resolve correctly
+- [ ] All environment variables documented in `.env.example`
 
-### Spacing
-- [ ] All sections have 96px top/bottom padding (64px mobile)
-- [ ] Container max-width is 1280px
-- [ ] Element gaps are consistent from spacing scale
+### 2. Content Accuracy
 
-### Components
-- [ ] Primary buttons use exact CSS from DESIGN_SYSTEM.md
-- [ ] No rounded corners (border-radius = 0)
-- [ ] No box shadows anywhere
+- [ ] All dollar amounts match current pricing
+- [ ] Competitor SLA quotes are verbatim (cite sources)
+- [ ] Founding slots count is accurate
+- [ ] Launch date is correct (March 31, 2026)
+- [ ] Contact email works (`founding@trustmonitor.dev`)
+- [ ] All links are absolute URLs (not relative)
 
-### Prohibited Elements
-- [ ] No icons or illustrations
-- [ ] No photos
-- [ ] No decorative elements
-- [ ] No dark mode toggle
+### 3. Design System Compliance
 
----
+- [ ] No green colors anywhere
+- [ ] No rounded corners >4px
+- [ ] No dark mode implementation
+- [ ] All text ≥16px
+- [ ] No serif fonts or italics
+- [ ] No icons/illustrations/photos
+- [ ] Whitespace feels institutional
+- [ ] Monospace used for dollar amounts
 
-## ✅ CONTENT VALIDATION
+### 4. Responsive Design
 
-### Copy Principles
-- [ ] No exclamation marks in headlines
-- [ ] No emojis except ⚠️ in legal disclaimer
-- [ ] Specific numbers used throughout
-- [ ] Competitors named explicitly
-- [ ] No startup jargon
+**Test on:**
+- [ ] Desktop (1920x1080)
+- [ ] Laptop (1440x900)
+- [ ] Tablet (768x1024)
+- [ ] Mobile (375x667 - iPhone SE)
+- [ ] Mobile (390x844 - iPhone 12)
+- [ ] Large mobile (414x896 - iPhone 11 Pro Max)
 
-### Required Sections (In Order)
-- [ ] Hero
-- [ ] Pain
-- [ ] Calculator
-- [ ] Proof
-- [ ] Comparison
-- [ ] Guarantee
-- [ ] Decision
-- [ ] Waitlist
-- [ ] Footer
+**Check:**
+- [ ] No horizontal scroll
+- [ ] All buttons visible and tappable
+- [ ] Form fields stack properly
+- [ ] Tables scroll horizontally on mobile
+- [ ] Font sizes readable on small screens
 
-### Critical Elements
-- [ ] Launch timeline visible ("Launching Q2 2026")
-- [ ] Scarcity visible ("25 slots remaining")
-- [ ] SLA preview PDF link works
-- [ ] Pre-launch disclaimer in footer
+### 5. Forms & Functionality
 
----
-
-## ✅ TECHNICAL VALIDATION
-
-### HTML/CSS
-- [ ] HTML validates (https://validator.w3.org)
-- [ ] No console errors
-- [ ] All images have alt text
-
-### Performance
-- [ ] Page loads in <3 seconds
-- [ ] Images optimized (<200KB each)
-- [ ] CSS minified for production
-
-### SEO (Pre-Launch)
-- [ ] robots.txt blocks all crawlers
-- [ ] Meta robots: noindex, nofollow
-- [ ] Title tag present
-- [ ] Meta description present
-
----
-
-## ✅ MOBILE RESPONSIVENESS
-
-### iPhone 12/13/14 (390px)
-- [ ] Hero visible without scrolling
-- [ ] All grids stack vertically
-- [ ] Buttons are full-width
-- [ ] Text is readable
-
-### Android Pixel (393px)
-- [ ] Same checks as iPhone
-- [ ] No horizontal scrolling
-
----
-
-## ✅ FORM FUNCTIONALITY
-
-### Submission
-- [ ] Form submits to Formspree
-- [ ] Required fields enforced
+**Waitlist Form:**
+- [ ] Formspree ID is set in `.env.local`
+- [ ] Form submits successfully
+- [ ] Redirects to `/thank-you` after submission
+- [ ] All required fields validated
 - [ ] Email validation works
-- [ ] Redirects to /thank-you
+- [ ] Honeypot field is hidden
+- [ ] Timestamp populates on page load
 
-### User Flow
-- [ ] Thank you page exists
-- [ ] Auto-reply email sent
-- [ ] Notification sent to founding@trustmonitor.dev
+**Calculator:**
+- [ ] Slider works on all browsers
+- [ ] Number input accepts values
+- [ ] Calculations are correct
+- [ ] Results update in real-time
+- [ ] Tier suggestions make sense
+- [ ] Currency formatting displays properly
 
----
+### 6. SEO & Meta Tags
 
-## ✅ ASSETS & FILES
+- [ ] Page title is set
+- [ ] Meta description is set
+- [ ] OpenGraph tags present
+- [ ] Twitter card tags present
+- [ ] Favicon loads correctly
+- [ ] `robots.txt` blocks crawlers (pre-launch)
+- [ ] No broken internal links
 
-### Required Files
-- [ ] SLA preview PDF exists at /public/sla-preview.pdf
-- [ ] PDF downloads correctly
-- [ ] Favicon exists
-- [ ] robots.txt exists with Disallow: /
+### 7. Security
 
----
+- [ ] SSL certificate valid
+- [ ] Security headers configured (see `next.config.js`)
+- [ ] No API keys exposed in client code
+- [ ] Form has honeypot field
+- [ ] CORS configured correctly
 
-## ✅ HOSTING & DEPLOYMENT
+### 8. Performance
 
-### Vercel Setup
-- [ ] Domain connected
-- [ ] SSL certificate active (HTTPS)
-- [ ] Build succeeds
-- [ ] No 404 errors
+- [ ] Lighthouse score >90 (Performance)
+- [ ] Lighthouse score 100 (Accessibility)
+- [ ] First Contentful Paint <1.5s
+- [ ] Largest Contentful Paint <2.5s
+- [ ] No layout shifts
+- [ ] Images optimized (N/A - no images)
 
-### DNS
-- [ ] DNS points to Vercel
-- [ ] DNS propagation complete
+### 9. Accessibility
 
----
+- [ ] All interactive elements keyboard-navigable
+- [ ] Form labels properly associated
+- [ ] Color contrast ratio ≥4.5:1 (WCAG AA)
+- [ ] No text over images (N/A)
+- [ ] Focus indicators visible
+- [ ] Screen reader tested (VoiceOver/NVDA)
 
-## ✅ LEGAL & COMPLIANCE
+### 10. Browser Testing
 
-### Required Pages
-- [ ] Privacy Policy exists
-- [ ] Terms of Service exists
-- [ ] Both linked in footer
-
-### Contact
-- [ ] founding@trustmonitor.dev is active
-- [ ] Email monitored for 72h reply
-
----
-
-## ✅ CROSS-BROWSER TESTING
-
+**Test on:**
 - [ ] Chrome (latest)
-- [ ] Safari (latest)
 - [ ] Firefox (latest)
-- [ ] Mobile Safari (iOS)
-- [ ] Mobile Chrome (Android)
+- [ ] Safari (latest)
+- [ ] Edge (latest)
+- [ ] Mobile Safari (iOS 15+)
+- [ ] Chrome Mobile (Android 12+)
+
+**Check:**
+- [ ] Form submissions work
+- [ ] Calculator interactions smooth
+- [ ] No visual glitches
+- [ ] Fonts render correctly
 
 ---
 
-## 🚨 BLOCKERS (DO NOT LAUNCH)
+## DEPLOYMENT CHECKLIST
 
-- [ ] Any green colors present
-- [ ] Icons/illustrations present
-- [ ] Startup jargon in copy
-- [ ] Form has <5 fields
-- [ ] Missing legal disclaimer
-- [ ] robots.txt allows crawling
-- [ ] SLA PDF missing
-- [ ] Form doesn't submit
-- [ ] SSL certificate missing
+### Vercel Configuration
+
+- [ ] Project connected to GitHub
+- [ ] Environment variables set in Vercel dashboard
+  - [ ] `NEXT_PUBLIC_FORMSPREE_ID`
+  - [ ] `NEXT_PUBLIC_SITE_URL`
+  - [ ] `NEXT_PUBLIC_LAUNCH_DATE`
+- [ ] Production domain configured
+- [ ] SSL enabled
+- [ ] Analytics disabled (pre-launch)
+
+### DNS Configuration
+
+- [ ] `trustmonitor.dev` points to Vercel
+- [ ] `www.trustmonitor.dev` redirects to apex
+- [ ] Email DNS records configured for `founding@trustmonitor.dev`
+- [ ] SPF/DKIM records set
+
+### Post-Deployment Verification
+
+- [ ] Production URL loads correctly
+- [ ] Form submissions received in Formspree
+- [ ] No console errors in production
+- [ ] SSL certificate valid
+- [ ] Performance acceptable on slow connections
 
 ---
 
-## 🎯 SUCCESS CRITERIA
+## MONITORING & MAINTENANCE
 
-### Week 1:
-- 3-5 qualified applications
-- 20+ SLA preview downloads
-- Zero critical bugs
+### Daily (First Week)
 
-### Week 4:
-- 15-25 qualified applications
-- 100+ SLA preview downloads
-- 3-5 enterprise inquiries
+- [ ] Check form submissions
+- [ ] Monitor error logs (Vercel dashboard)
+- [ ] Review any support emails
+
+### Weekly
+
+- [ ] Update founding slots count (if applications received)
+- [ ] Verify competitor SLA links still valid
+- [ ] Check for broken links
+- [ ] Review analytics (if enabled)
+
+### Monthly
+
+- [ ] Review qualification criteria
+- [ ] Update dollar amounts if needed
+- [ ] Check Formspree quota
+
+### Quarterly
+
+- [ ] Re-verify competitor SLA quotes
+- [ ] Review and update content
+- [ ] Performance audit
 
 ---
 
-**Last Updated:** February 13, 2026  
-**Status:** Use this before every deploy
+## INCIDENT RESPONSE
+
+### If Form Stops Working
+
+1. Check Formspree dashboard (quota exceeded?)
+2. Verify environment variables in Vercel
+3. Test with different email addresses
+4. Check Formspree spam folder
+
+### If Site Goes Down
+
+1. Check Vercel status page
+2. Review recent deployments
+3. Check DNS records
+4. Verify SSL certificate
+
+### If Content Needs Emergency Update
+
+1. Create branch: `hotfix/description`
+2. Make changes
+3. Test locally
+4. Deploy to preview URL
+5. Merge to main
+
+---
+
+## LEGAL & COMPLIANCE
+
+### Before Launch
+
+- [ ] Legal team reviews all content
+- [ ] SLA preview PDF generated and reviewed
+- [ ] Privacy policy drafted (if needed)
+- [ ] Terms of service drafted (if needed)
+- [ ] Competitor quotes verified with sources
+- [ ] Liability caps clearly stated
+- [ ] Pre-launch disclaimer present
+
+### Ongoing
+
+- [ ] Track all form submissions securely
+- [ ] Maintain GDPR compliance (if EU visitors)
+- [ ] Document any changes to pricing/terms
+- [ ] Archive previous versions
+
+---
+
+## COMMUNICATION PLAN
+
+### Launch Day
+
+**Email to:**
+- Internal team
+- Early interest list (if any)
+- Industry contacts
+
+**Social (if ready):**
+- LinkedIn post (founding program)
+- Twitter thread (liability model)
+
+**Monitoring:**
+- Watch for traffic spikes
+- Monitor form submissions
+- Check server response times
+
+### First Week
+
+- Respond to all applications within 48 hours
+- Track qualification rate
+- Document common questions
+- Adjust form fields if needed
+
+---
+
+## METRICS TO TRACK
+
+### Primary KPIs
+
+- Applications submitted
+- Qualification rate
+- Time to respond
+- Conversion to call
+
+### Secondary Metrics
+
+- Traffic sources
+- Bounce rate (Hero section)
+- Calculator usage
+- SLA preview downloads
+- Form abandonment points
+
+### Do NOT Track
+
+- Individual user behavior (GDPR)
+- Heatmaps (pre-launch)
+- Session recordings (privacy)
+
+---
+
+## ROLLBACK PLAN
+
+### If Critical Issues Found
+
+1. Immediately revert to previous deployment (Vercel dashboard)
+2. Document issue in GitHub Issues
+3. Fix in separate branch
+4. Test thoroughly before redeployment
+
+### Data Integrity
+
+- Form submissions go to Formspree (external)
+- No database to corrupt
+- No user accounts to lose
+
+---
+
+## SUCCESS CRITERIA
+
+### Week 1
+
+- [ ] 10+ qualified applications
+- [ ] <1% form error rate
+- [ ] <2s page load time
+- [ ] No critical bugs
+
+### Month 1
+
+- [ ] 25 qualified applications (founding slots filled)
+- [ ] 5+ enterprise inquiries
+- [ ] 100+ SLA preview downloads
+
+### Quarter 1
+
+- [ ] Convert 10+ founding customers
+- [ ] Launch public beta
+- [ ] Iterate based on feedback
+
+---
+
+## FINAL PRE-LAUNCH CHECKLIST
+
+**Day Before Launch:**
+
+- [ ] Run full test suite
+- [ ] Verify all links
+- [ ] Test form submission end-to-end
+- [ ] Check mobile responsiveness
+- [ ] Review all copy one last time
+- [ ] Update founding slots to 25
+- [ ] Set launch date to current
+- [ ] Remove any "coming soon" language
+
+**Launch Day:**
+
+- [ ] Deploy to production
+- [ ] Verify production deployment
+- [ ] Test form on production URL
+- [ ] Send launch email
+- [ ] Monitor for first hour
+- [ ] Respond to any immediate issues
+
+**Post-Launch:**
+
+- [ ] Document any issues encountered
+- [ ] Plan first content update
+- [ ] Schedule qualification calls
+- [ ] Begin founder interviews
+
+---
+
+## CONTACTS
+
+**Technical Issues:**
+- Vercel support: support@vercel.com
+- Formspree support: support@formspree.io
+
+**Domain/DNS:**
+- Domain registrar: [Add registrar]
+- DNS provider: [Add provider]
+
+**Emergency:**
+- On-call developer: [Add contact]
+- Project lead: [Add contact]
+
+---
+
+**Remember:** This is a validation page, not a product launch. Focus on qualifying the right customers, not maximizing traffic.

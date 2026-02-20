@@ -1,0 +1,15 @@
+# TrustMonitor - Pre-launch robots.txt
+# Block all crawlers until public launch
+
+User-agent: *
+Disallow: /
+
+# Allow access to public assets
+Allow: /sla-preview.pdf
+Allow: /favicon.ico
+
+# When ready to launch, replace with:
+# User-agent: *
+# Allow: /
+# Disallow: /thank-you/
+# Sitemap: https://trustmonitor.dev/sitemap.xml

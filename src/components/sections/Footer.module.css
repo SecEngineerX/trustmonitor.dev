@@ -1,0 +1,124 @@
+.footer {
+  padding: var(--space-8) 0 var(--space-6) 0;
+  background: var(--bg-subtle);
+  border-top: 1px solid var(--border-gray);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  text-align: center;
+}
+
+.trustBadges {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding: var(--space-4) 0;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-gray);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: var(--weight-medium);
+  transition: all var(--transition-fast);
+}
+
+.badge:hover {
+  border-color: var(--link-blue);
+  color: var(--link-blue);
+  background: rgba(30, 64, 175, 0.02);
+}
+
+.badgeIcon {
+  font-size: 16px;
+  display: inline-block;
+}
+
+.badgeText {
+  white-space: nowrap;
+}
+
+.disclaimer {
+  padding: var(--space-4);
+  background: rgba(127, 29, 29, 0.05);
+  border: 1px solid rgba(127, 29, 29, 0.2);
+  border-radius: var(--border-radius-sm);
+}
+
+.disclaimer p {
+  font-size: var(--text-sm);
+  line-height: var(--line-relaxed);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.link {
+  font-size: var(--text-base);
+  color: var(--link-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.contact p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.contact a {
+  color: var(--link-blue);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.copyright p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .trustBadges {
+    gap: var(--space-3);
+  }
+
+  .badge {
+    padding: var(--space-2) var(--space-2);
+    font-size: var(--text-xs);
+  }
+
+  .badgeIcon {
+    font-size: 14px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}

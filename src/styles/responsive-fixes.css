@@ -1,0 +1,213 @@
+/* Responsive Fixes & Mobile Optimization */
+
+/* Prevent horizontal overflow on all viewports */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Ensure all containers are responsive */
+.container, .container-narrow, .container-wide {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Mobile-first approach for buttons */
+button, .tm-button, a[class*="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  touch-action: manipulation;
+}
+
+/* Ensure form inputs are touch-friendly */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+  min-height: 44px;
+  font-size: 16px;
+  padding: 12px;
+}
+
+/* Prevent zoom on input focus (iOS) */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  font-size: 16px;
+}
+
+/* Ensure modals don't overflow */
+dialog, .modal, [role="dialog"] {
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Fix sticky elements */
+[position="sticky"],
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: var(--z-sticky);
+}
+
+/* Prevent layout shift from scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Ensure images don't overflow containers */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Fix table overflow on mobile */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Ensure hero text doesn't overflow */
+h1, h2, h3, h4, h5, h6 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Fix CTA button alignment */
+.cta, [class*="cta"] {
+  display: inline-block;
+  min-width: 200px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Mobile padding adjustments */
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: clamp(24px, 6vw, 32px);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(20px, 5vw, 28px);
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Ensure no overlapping elements */
+  [class*="overlay"],
+  [class*="modal"] {
+    z-index: var(--z-modal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  /* Fix navbar mobile behavior */
+  nav, [role="navigation"] {
+    position: relative;
+    z-index: var(--z-sticky);
+  }
+
+  /* Ensure form fields are full width */
+  .tm-field input,
+  .tm-field select,
+  .tm-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Fix grid layouts */
+  [class*="grid"] {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ensure buttons are full width on mobile */
+  .tm-button,
+  button[type="submit"] {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small device adjustments */
+  h1 {
+    font-size: clamp(20px, 5vw, 28px);
+  }
+
+  h2 {
+    font-size: clamp(18px, 4vw, 24px);
+  }
+
+  /* Reduce padding on small screens */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Stack flex layouts */
+  [class*="flex"] {
+    flex-direction: column;
+  }
+
+  /* Ensure no text clipping */
+  p, span, div {
+    word-break: break-word;
+  }
+}
+
+/* Landscape mode adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  section {
+    padding: 40px 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+}
+
+/* High DPI devices */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure crisp borders */
+  border {
+    border-width: 1px;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  button, .tm-button {
+    display: none;
+  }
+}

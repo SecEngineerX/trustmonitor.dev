@@ -1,0 +1,66 @@
+:root {
+  /* COLORS - LOCKED */
+  --bg-primary: #FFFFFF;
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+  --accent: #7F1D1D;           /* Blood red for liability */
+  --link-blue: #1E40AF;        /* Enterprise blue */
+  --border-gray: #E5E7EB;
+  --bg-subtle: #F9FAFB;
+  
+  /* SPACING */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-7: 64px;
+  --space-8: 96px;
+  --space-9: 128px;
+  
+  /* TYPOGRAPHY */
+  --font-headings: 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Courier New', monospace;
+  
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+  --text-6xl: 60px;
+  
+  --line-tight: 1.2;
+  --line-normal: 1.5;
+  --line-relaxed: 1.75;
+  
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  
+  /* LAYOUT */
+  --container-max: 1200px;
+  --container-narrow: 800px;
+  --container-wide: 1400px;
+  
+  /* BORDERS */
+  --border-width: 1px;
+  --border-radius: 2px;
+  --border-radius-sm: 4px;
+  
+  /* TRANSITIONS */
+  --transition-fast: 150ms ease-in-out;
+  --transition-base: 250ms ease-in-out;
+  
+  /* Z-INDEX */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 1000;
+}

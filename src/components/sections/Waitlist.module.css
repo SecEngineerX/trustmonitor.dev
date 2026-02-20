@@ -1,0 +1,7 @@
+.waitlist {
+  padding: var(--space-8) 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-gray);
+}
+
+/* Additional scoped styles if needed beyond globals.css */

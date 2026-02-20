@@ -1,0 +1,85 @@
+.comparison {
+  padding: var(--space-8) 0;
+  background: var(--bg-subtle);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.header h2 {
+  margin-bottom: var(--space-4);
+}
+
+.description {
+  font-size: var(--text-lg);
+  color: var(--text-secondary);
+  line-height: var(--line-relaxed);
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-gray);
+  border-radius: var(--border-radius-sm);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-base);
+}
+
+.table thead {
+  background: var(--bg-subtle);
+}
+
+.table th {
+  padding: var(--space-4);
+  text-align: left;
+  font-weight: var(--weight-semibold);
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-gray);
+  white-space: nowrap;
+}
+
+.table td {
+  padding: var(--space-4);
+  border-bottom: 1px solid var(--border-gray);
+  color: var(--text-primary);
+  line-height: var(--line-normal);
+}
+
+.table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr.highlight {
+  background: rgba(30, 64, 175, 0.05);
+}
+
+.table tbody tr.highlight td {
+  font-weight: var(--weight-medium);
+}
+
+.vendorName {
+  font-weight: var(--weight-semibold);
+  white-space: nowrap;
+}
+
+.risk {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: var(--text-sm);
+  }
+  
+  .table th,
+  .table td {
+    padding: var(--space-3);
+  }
+}

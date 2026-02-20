@@ -1,281 +1,391 @@
 # TrustMonitor Content Rules
 
-**Mission:** Every word must communicate credibility, transparency, and institutional seriousness.
+**Mission:** Make CTOs feel financial pain, then offer the only solution with real liability.
 
-**Target Reader:** A CTO who has been burned by vendor liability clauses and is reading this at 11 PM on a Sunday after another missed alert.
-
----
-
-## ✍️ CORE PRINCIPLES
-
-### 1. Specificity Over Abstraction
-
-**ALWAYS:**
-- Use exact numbers ($43,000, not "significant loss")
-- Use exact dates (February 10, 2026 at 2:47 AM)
-- Use exact product names (Datadog, PagerDuty, Better Uptime)
-- Use exact contract language ("We are not liable for missed alerts")
-
-**NEVER:**
-- "Substantial revenue impact"
-- "Recently"
-- "Leading monitoring tools"
-- "Industry-standard terms and conditions"
+**Tone:** Cold. Institutional. Legal-document precision. Zero warmth. Zero hype.
 
 ---
 
-### 2. Facts Over Marketing Claims
+## Core Principles
 
-**ALWAYS:**
-- Quote actual SLA clauses from competitors
-- State measurable capabilities (3+ regions, 2/3 quorum, 7yr retention)
-- Show real examples (JSON evidence bundle, OpenTimestamps link)
-- Acknowledge limitations ($200-$1,000 cap, not unlimited liability)
+### 1. Specific Numbers, Not Abstract Claims
 
-**NEVER:**
-- "Revolutionary approach"
-- "Game-changing solution"
-- "Unlike anything else"
-- "The future of monitoring"
+❌ **WRONG:** "Significant downtime impact"
+✅ **RIGHT:** "$43,000 lost in 22 minutes"
 
----
+❌ **WRONG:** "Industry-leading uptime"
+✅ **RIGHT:** "99.95% uptime with $500 payout per miss"
 
-### 3. Legal Precision Over Casual Tone
+❌ **WRONG:** "Fast response times"
+✅ **RIGHT:** "7 business days for payout"
 
-**ALWAYS:**
-- Write like a contract, not a blog post
-- Use formal language ("pursuant to", "verified outage", "financial compensation")
-- Include disclaimers prominently
-- State conditions explicitly ("within 24 hours of verification")
+### 2. Legal Language, Not Marketing Speak
 
-**NEVER:**
-- "Hey there!"
-- "We're excited to announce..."
-- "Join us on this journey"
-- Exclamation marks in headlines
+Use actual contract clauses. Quote competitors' SLAs verbatim.
 
----
+✅ **GOOD:**
+> "In no event shall Datadog be liable for lost profits or business opportunities."
+> — Datadog SLA, Section 4.2
 
-### 4. Pain Amplification Before Solution
+❌ **BAD:**
+> "Most monitoring tools don't cover losses."
 
-**ALWAYS:**
-- Start with their current pain (the $0 liability clause)
-- Make them relive a specific incident
-- Show exactly what they lost vs. what vendor paid
-- Only then introduce TrustMonitor as alternative
+### 3. State Facts, Not Opinions
 
-**NEVER:**
-- Lead with TrustMonitor features
-- Hide competitor comparisons
-- Soften the pain with "but it's okay"
-- Skip the emotional punch
+❌ **WRONG:** "We believe monitoring should be better"
+✅ **RIGHT:** "Every competitor limits liability to $0"
+
+❌ **WRONG:** "The industry standard is broken"
+✅ **RIGHT:** "Datadog paid $47 in service credits. You lost $43,000."
 
 ---
 
-## 🚫 FORBIDDEN LANGUAGE
+## Forbidden Words & Phrases
 
-### Startup Jargon (INSTANT REJECTION)
+### Never Use:
 
 ❌ "Join the revolution"
-❌ "Disruptive innovation"
-❌ "Paradigm shift"
-❌ "Game-changer"
-❌ "Next-generation"
-❌ "Cutting-edge"
-❌ "Synergy"
-❌ "Leverage"
-❌ "Empower"
-❌ "Transform"
-❌ "Reimagine"
+❌ "Game-changing solution"
+❌ "Get started"
+❌ "We're excited to announce"
+❌ "Cutting-edge technology"
+❌ "Seamless experience"
+❌ "World-class support"
+❌ "Trusted by thousands"
+❌ "Sign up now"
+❌ Exclamation marks in headlines (body text only)
+❌ Emojis in copy (except 🔒 and ⚠ for specific contexts)
 
-### Hype Language
+### Use Instead:
 
-❌ "Amazing"
-❌ "Incredible"
-❌ "Awesome"
-❌ "Fantastic"
-❌ "Revolutionary"
-❌ "Groundbreaking"
-❌ "Best-in-class"
-❌ "World-class"
-❌ "Industry-leading"
-
-### Vague Claims
-
-❌ "Significant improvement"
-❌ "Better results"
-❌ "Enhanced performance"
-❌ "Optimized for success"
-❌ "Proven track record"
-❌ "Thousands of satisfied customers"
-
-### Casual Tone
-
-❌ "Hey!"
-❌ "Awesome!"
-❌ "Let's go!"
-❌ "You're gonna love this"
-❌ "Super excited"
-❌ "Can't wait"
-
-### Emotional Manipulation
-
-❌ "Don't miss out!"
-❌ "Limited time only!" (unless factually true)
-❌ "Act now before it's too late!"
-❌ "You'll regret not signing up"
-❌ Fake countdown timers
-❌ Fake "3 spots left" scarcity
+✅ "Apply for founding program"
+✅ "Submit application"
+✅ "Review SLA terms"
+✅ "Calculate exposure"
+✅ "Verify evidence"
+✅ "Assess risk"
 
 ---
 
-## ✅ APPROVED LANGUAGE PATTERNS
+## Section-by-Section Guidelines
 
-### Pain Statements
+### Hero
 
-✅ "Your monitoring tool didn't alert you."
-✅ "You lost $43,000 in transactions."
-✅ "Their liability? $0."
-✅ "You got back $23.47 in service credits."
+**Goal:** Make them relive their worst monitoring failure.
 
-### Fact Statements
+**Rules:**
+- Specific timestamp: "February 10, 2026 — 2:47 AM"
+- Specific incident: "Payment Gateway Down for 22 Minutes"
+- Specific loss: "$43,000 in transactions"
+- End with "$0 liability" punch
 
-✅ "Contract-backed liability for missed alerts"
-✅ "Cryptographic evidence bundle with RFC 3161 timestamp"
-✅ "$200-$1,000 per incident cap (tier-dependent)"
-✅ "3+ geographic regions with 2-of-3 quorum requirement"
-
-### Urgency Statements (Must Be Factual)
-
-✅ "Founding program closes March 31, 2026"
-✅ "40% discount locked for 12 months"
-✅ "25 slots remaining" (only if actually limited to 25)
-✅ "No extensions after launch pricing takes effect"
-
-### CTA Language
-
-✅ "Apply to Founding Program"
-✅ "Review SLA Preview"
-✅ "Calculate Your Loss"
-✅ "Submit Application"
-✅ "Download Evidence Bundle Example"
-
-❌ "Get Started"
-❌ "Sign Up Now"
-❌ "Join Today"
-❌ "Try It Free"
-
----
-
-## 📝 SECTION-SPECIFIC RULES
-
-### Hero Section
-
-**DO:**
-- Open with specific incident scenario
-- State exact revenue loss
-- Contrast with $0 vendor liability
-- Ask provocative question
-
-**DON'T:**
-- Generic descriptions
-- Abstract value props
-- Company backstory
-- Team photos
-
----
+**Forbidden:**
+- Abstract pain points
+- Generic "we understand your struggles"
+- Friendly/empathetic tone
 
 ### Pain Section
 
-**DO:**
-- Quote competitor SLA clauses verbatim
-- Name specific vendors
-- Show service credit amounts
-- Contrast with TrustMonitor liability
+**Goal:** Expose their current vendor's actual contract.
 
-**DON'T:**
-- Say "other vendors"
-- Soften the message
-- Use hypotheticals
+**Rules:**
+- Quote exact SLA clauses (verbatim, with citations)
+- Show specific payout amounts they received
+- Compare to actual losses
+- Use red for $0 payouts
 
----
+**Example:**
+```
+Their SLA Says:
+"PagerDuty's total liability shall not exceed fees paid in the prior 12 months."
 
-### Calculator Section
+What You Got:
+Maximum payout: $240 (12 months × $20/mo)
 
-**DO:**
-- Interactive sliders/inputs
-- Show three numbers: loss, vendor paid, TrustMonitor would pay
-- Acknowledge caps explicitly
-- Use real math
+What You Lost:
+$68,000
+```
 
-**DON'T:**
-- Promise unlimited coverage
-- Hide the caps
-- Use inflated defaults
+### Calculator
 
----
+**Goal:** Make them see THEIR number.
+
+**Rules:**
+- Default to realistic values (3 incidents, $15K avg loss)
+- Show calculations transparently
+- Cap payouts per tier (don't over-promise)
+- Use monospace for dollar amounts
+
+**Forbidden:**
+- Hiding the math
+- Showing unlimited liability
+- Emotional language ("imagine saving...")
 
 ### Proof Section
 
-**DO:**
-- Show JSON evidence bundle
-- Link to live verification
-- State technical specs
-- Use code blocks
+**Goal:** Show verification method, not "trust us."
 
-**DON'T:**
-- Say "trust us"
-- Hide technical details
-- Claim "unhackable"
+**Rules:**
+- Explain technical implementation
+- Link to actual verification tools (OpenTimestamps)
+- Show sample evidence bundle (real JSON)
+- Use monospace for code/data
+
+**Forbidden:**
+- "State-of-the-art verification"
+- "Military-grade encryption"
+- Abstract security claims
+
+### Comparison Table
+
+**Goal:** Direct comparison with real vendors.
+
+**Rules:**
+- Name competitors explicitly (Datadog, PagerDuty, Better Uptime)
+- State facts only (no trash talk)
+- Show TrustMonitor row last (after they've seen alternatives)
+- Highlight TrustMonitor row subtly (border color, no "BEST" badge)
+
+**Forbidden:**
+- "Unlike other vendors..."
+- Negative language about competitors
+- Exaggerating differences
+
+### Pricing (Guarantee)
+
+**Goal:** Show this is real money, not vaporware.
+
+**Rules:**
+- Show exact dollar amounts
+- State liability caps clearly
+- Mention founding discount with expiration date
+- Use "MOST SELECTED" badge for Professional tier
+
+**Forbidden:**
+- "Starting at just..."
+- "Affordable pricing"
+- Hiding caps or limitations
+
+### Decision Section
+
+**Goal:** Force the binary choice.
+
+**Rules:**
+- Two cards: Status quo vs. TrustMonitor
+- List specific consequences (not benefits)
+- Use ⚠ for status quo risks
+- Use ✓ for TrustMonitor outcomes
+
+**Forbidden:**
+- "Make the right choice"
+- "Don't miss out"
+- Urgency tactics beyond founding slots
+
+### Waitlist Form
+
+**Goal:** Qualify leads, not capture everyone.
+
+**Rules:**
+- Ask for business metrics (revenue, incidents, losses)
+- Require corporate email
+- Label optional fields clearly
+- State qualification criteria upfront
+
+**Forbidden:**
+- "Get instant access"
+- "No credit card required"
+- Over-promising response times
 
 ---
 
-### Comparison Section
+## Numbers & Data
 
-**DO:**
-- Table with named competitors
-- State facts only
-- Acknowledge where they excel
-- Show unique differentiator
+### Formatting
 
-**DON'T:**
-- Trash competitors
-- Cherry-pick comparisons
-- Use loaded language
+**Dollar Amounts:**
+```
+✅ $43,000
+✅ $2,499/month
+❌ $43k
+❌ $2.5k/mo
+```
+
+**Percentages:**
+```
+✅ 99.95%
+❌ ~99%
+❌ 99.9%+
+```
+
+**Dates:**
+```
+✅ February 10, 2026 — 2:47 AM
+✅ March 31, 2026
+❌ Feb 10
+❌ 2/10/26
+```
+
+**Time Ranges:**
+```
+✅ 22 minutes
+✅ 7 business days
+❌ ~20 mins
+❌ about a week
+```
+
+### Sources
+
+When citing competitor data:
+- Link to actual SLA pages
+- Include section numbers if possible
+- Update quarterly (set calendar reminder)
 
 ---
 
-## 🎯 VOICE & TONE MATRIX
+## Disclaimers & Legal
 
-| Section | Voice | Tone | Goal |
-|---------|-------|------|------|
-| Hero | Direct | Provocative | Feel the pain |
-| Pain | Factual | Cold | Expose $0 liability |
-| Calculator | Interactive | Analytical | Personalize loss |
-| Proof | Technical | Transparent | Show evidence |
-| Comparison | Neutral | Institutional | State facts |
-| Guarantee | Formal | Contractual | Set expectations |
-| Decision | Binary | Consequential | Force choice |
-| Waitlist | Qualifying | Professional | Filter for fit |
+### Required Disclaimers
+
+**Pre-launch notice:**
+> TrustMonitor is a pre-launch product. This site validates founding customer interest. No monitoring services are currently operational.
+
+**Founding slots scarcity:**
+> 25 founding slots remaining (update manually as applications come in)
+
+**Payout caps:**
+> TrustMonitor payouts are capped per tier. Professional tier caps at $500/incident.
+
+### Placement
+
+- Footer: Pre-launch notice
+- Calculator: Payout caps
+- Waitlist: Manual review process
 
 ---
 
-## 🔍 SELF-EDITING CHECKLIST
+## Voice & Tone Examples
 
+### ✅ CORRECT TONE:
+
+> February 10, 2026 — 2:47 AM
+> 
+> Your payment gateway was down for 22 minutes. Your monitoring tool didn't alert you. You lost $43,000 in transactions.
+> 
+> Their liability? $0.
+
+**Why it works:**
+- Specific timestamp
+- Specific loss
+- No emotion, just facts
+- Ends with brutal truth
+
+### ❌ WRONG TONE:
+
+> Imagine losing thousands because your monitoring failed you. Don't let this happen again! We're revolutionizing uptime monitoring with cutting-edge AI and game-changing liability.
+
+**Why it fails:**
+- Abstract loss ("thousands")
+- Marketing hyperbole
+- Exclamation marks
+- Buzzwords (AI, game-changing)
+
+---
+
+## Urgency Tactics
+
+### ✅ ALLOWED:
+
+- Founding slots remaining (25 → 20 → 15, etc.)
+- Founding discount expiration date (March 31, 2026)
+- "Manual review within 48 hours"
+
+### ❌ FORBIDDEN:
+
+- "Only 3 spots left!"
+- "This offer expires tonight!"
+- Countdown timers
+- "Don't miss out"
+- False scarcity
+
+---
+
+## CTAs (Call-to-Action)
+
+### Button Text Rules
+
+✅ **GOOD:**
+- CALCULATE YOUR EXPOSURE
+- REVIEW SLA TERMS
+- APPLY FOR FOUNDING PROGRAM
+- SUBMIT APPLICATION
+- CONTACT SALES
+
+❌ **BAD:**
+- Get Started
+- Sign Up Now
+- Join Us
+- Learn More
+- Try It Free
+
+### Button Hierarchy
+
+**Primary:** Black background, white text
+**Secondary:** White background, black border
+**Outline:** Blue border, blue text (links only)
+
+---
+
+## A/B Testing Guidelines
+
+If testing copy variations:
+
+1. **Hero Headlines** — Test specific incident details
+2. **Calculator Defaults** — Test incident count (3 vs 5)
+3. **Pricing Order** — Test Standard-first vs Professional-first
+4. **Form Length** — Test 5 vs 8 required fields
+
+**DO NOT TEST:**
+- Color schemes (locked)
+- Tone (institutional, locked)
+- Competitor names (factual, locked)
+
+---
+
+## Content Update Schedule
+
+### Weekly:
+- Review founding slots count
+- Check competitor SLA links (404s?)
+
+### Monthly:
+- Verify dollar amounts in examples
+- Update "current date" references
+- Review form submission data
+
+### Quarterly:
+- Re-quote competitor SLAs
+- Update founding discount if needed
+- Review qualification criteria
+
+---
+
+## Writing Checklist
+
+Before publishing ANY copy:
+
+- [ ] No marketing buzzwords
+- [ ] Specific numbers, not ranges
+- [ ] Legal/institutional tone
 - [ ] No exclamation marks in headlines
-- [ ] No question marks in headlines
-- [ ] No emojis (except ⚠️ in disclaimer)
-- [ ] Specific numbers used
-- [ ] Competitors named explicitly
-- [ ] Facts stated, not opinions
-- [ ] Disclaimers included
-- [ ] Caps stated clearly
-- [ ] No startup jargon
-- [ ] No casual tone
-- [ ] CTAs use approved language
-- [ ] All dates are specific
+- [ ] No emojis (except 🔒⚠)
+- [ ] Sources cited for competitor data
+- [ ] Dollar amounts in monospace
+- [ ] Dates in full format
+- [ ] No "we're excited" language
+- [ ] Binary choices, not open-ended
+- [ ] Consequences stated, not benefits
+- [ ] Disclaimers included where needed
 
 ---
 
-**Last Updated:** February 13, 2026  
-**Status:** Locked - No exceptions
+**Remember:** You're writing a legal contract that happens to be a website. Every word should feel like it came from a lawyer, not a marketer.
