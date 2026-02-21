@@ -122,7 +122,7 @@ export const COMPARISON_CONTENT = {
     },
     {
       name: 'TrustMonitor',
-      liability: '$100-$1,000 per incident',
+      liability: '$200-$1,000 per incident',
       evidence: 'Cryptographically signed, publicly verifiable',
       payout: '3 business days',
       risk: 'Shared liability model',
@@ -154,9 +154,9 @@ export const GUARANTEE_CONTENT = {
     },
     {
       name: 'Professional',
-      price: 499,
+      price: 999,
       interval: 'month',
-      liability: 200,
+      liability: 500,
       checks: 180,
       regions: 5,
       support: 'Priority (2hr response)',
@@ -166,22 +166,22 @@ export const GUARANTEE_CONTENT = {
         'Multi-region checks (3+)',
         'Custom check intervals (10s minimum)',
         '7-year evidence retention',
-        '$200 per verified incident',
+        '$500 per verified incident',
         'SLA review with legal team',
       ],
       badge: 'MOST SELECTED',
     },
     {
       name: 'Enterprise',
-      price: null,
+      price: 1,499,
       interval: 'custom',
-      liability: 1000,
+      liability: 7000,
       checks: 'Unlimited',
       regions: 'Custom',
       support: 'Dedicated Slack channel',
       features: [
         'Everything in Professional',
-        'Custom liability caps ($1,000+)',
+        'Custom liability caps ($700+)',
         'On-premise deployment option',
         'Custom evidence retention policies',
         'Contractual SLA guarantees',
@@ -217,8 +217,8 @@ export const DECISION_CONTENT = {
       title: 'Switch to TrustMonitor',
       label: 'Liability Transfer',
       consequences: [
-        'Pay $299-$499/month in monitoring fees',
-        'TrustMonitor pays $100-$200 per verified miss',
+        'Pay $299-$1499/month in monitoring fees',
+        'TrustMonitor pays $100-$700 per verified miss',
         'Cryptographic proof for every incident',
         'Defined risk model vs. undefined losses',
       ],
@@ -325,3 +325,5 @@ export const SEO = {
   ogImage: '/og-image.png',
   twitterHandle: '@trustmonitor',
 } as const;
+
+
